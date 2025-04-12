@@ -7,3 +7,10 @@ app.use(cors());
 app.use(express.json());
 app.use(Route);
 app.listen(5000, () => console.log("server running"));
+
+//mengatasi cannot GET
+app.get('/', (req, res) => {
+  res.send('Backend is running...');
+});
+
+app.listen(5000, () => console.log('Server Up and Running...'));
